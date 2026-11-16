@@ -40,9 +40,9 @@ impl Player {
     pub fn handle_movement(&mut self, ctx: &mut RaylibDrawHandle) {
         let dt = ctx.get_frame_time();
 
-        if ctx.is_key_down(KeyboardKey::KEY_S) {
+        if ctx.is_key_down(KeyboardKey::KEY_S) || ctx.is_key_down(KeyboardKey::KEY_DOWN) {
             self.velocity = (self.velocity + PLAYER_ACCELERATION * dt).min(PLAYER_MAX_SPEED);
-        } else if ctx.is_key_down(KeyboardKey::KEY_W) {
+        } else if ctx.is_key_down(KeyboardKey::KEY_W) || ctx.is_key_down(KeyboardKey::KEY_UP) {
             self.velocity = (self.velocity - PLAYER_ACCELERATION * dt).max(-PLAYER_MAX_SPEED);
         } else {
             if self.velocity > 0.0 {
