@@ -1,10 +1,10 @@
 /* SCREEN */
-pub const SCREEN_WIDTH: u32 = 800;
+pub const SCREEN_WIDTH: u32 = 1000;
 pub const SCREEN_HEIGHT: u32 = 600;
 
 /* PlAYER */
 pub const PLAYER_WIDTH: f32 = 20.0;
-pub const PLAYER_HEIGHT: f32 = 60.0;
+pub const PLAYER_HEIGHT: f32 = 80.0;
 
 pub const PLAYER_MAX_SPEED: f32 = 400.0;
 pub const PLAYER_ACCELERATION: f32 = 3000.0;
